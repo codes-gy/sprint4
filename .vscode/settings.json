@@ -1,0 +1,36 @@
+{
+  "editor.semanticTokenColorCustomizations": {
+    "rules": {
+      // 여기에 원하는 규칙을 추가합니다.
+
+      // 예시 1: 모든 함수(function)를 파란색으로
+      "function": "#61AFEF",
+
+      // 예시 2: 모든 변수(variable)를 주황색으로
+      "variable": "#D19A66",
+
+      // 예시 3: 모든 클래스(class)를 보라색, 굵게
+      "class": {
+        "foreground": "#C678DD", // 글자색
+        "fontStyle": "bold" // 스타일 (bold, italic, underline)
+      },
+
+      // 예시 4: 모든 인터페이스(interface)를 초록색, 기울임꼴로
+      "interface": {
+        "foreground": "#98C379",
+        "fontStyle": "italic"
+      },
+
+      // 예시 5: 모든 매개변수(parameter)를 특정 색으로
+      "parameter": "#E06C75"
+    }
+  },
+  "workbench.colorCustomizations": {
+    // 예: 편집기 전체 배경
+    "editor.background": "#171919",
+    // 예: 마우스로 끈 영역의 배경
+    "editor.selectionBackground": "#a3a496"
+  }
+}
+
+///
