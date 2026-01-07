@@ -1,4 +1,4 @@
-import { UnauthorizedError } from '../lib/errors/UnauthorizedError';
+import { UnauthorizedError } from '../lib/errors/UnauthorizedError.js';
 
 export class User {
     constructor({ id, email, nickname, image, createdAt, updatedAt }) {
