@@ -18,8 +18,8 @@ const options = {
         },
         servers: [
             {
-                url: 'http://localhost:3000',
-                description: '개발 환경',
+                url: 'https://sprint4-gqmg.onrender.com',
+                description: '배포 환경',
             },
         ],
         tags: [
