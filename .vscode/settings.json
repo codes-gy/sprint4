@@ -1,36 +1,84 @@
 {
-  "editor.semanticTokenColorCustomizations": {
-    "rules": {
-      // 여기에 원하는 규칙을 추가합니다.
+    // ---------------------------
+    // GitHub Copilot
+    // ---------------------------
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "scminput": false
+    },
+    // Dev Container/Remote에서 Copilot은 UI(로컬)에서 실행되게
+    "remote.extensionKind": {
+        "github.copilot": ["ui"]
+    },
 
-      // 예시 1: 모든 함수(function)를 파란색으로
-      "function": "#61AFEF",
+    // ---------------------------
+    // Editor 기본 동작
+    // ---------------------------
+    "editor.quickSuggestions": {
+        "other": true,
+        "strings": true,
+        "comments": false
+    },
+    "editor.suggest.preview": true,
+    "editor.suggestSelection": "first",
 
-      // 예시 2: 모든 변수(variable)를 주황색으로
-      "variable": "#D19A66",
+    // Tab 수락 흐름(인라인 제안/자동완성)
+    "editor.tabCompletion": "on",
+    "editor.acceptSuggestionOnEnter": "off",
 
-      // 예시 3: 모든 클래스(class)를 보라색, 굵게
-      "class": {
-        "foreground": "#C678DD", // 글자색
-        "fontStyle": "bold" // 스타일 (bold, italic, underline)
-      },
+    // 저장 시 포맷 + ESLint 자동 수정
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
 
-      // 예시 4: 모든 인터페이스(interface)를 초록색, 기울임꼴로
-      "interface": {
-        "foreground": "#98C379",
-        "fontStyle": "italic"
-      },
+    // ---------------------------
+    // Prettier
+    // ---------------------------
+    // 기본 포매터를 Prettier로
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // (선택) 저장 시에만 포맷되게 하고 싶다면 아래 주석 해제
+    // "editor.formatOnPaste": false,
+    // "editor.formatOnType": false,
 
-      // 예시 5: 모든 매개변수(parameter)를 특정 색으로
-      "parameter": "#E06C75"
+    // 언어별로 확실히 Prettier 지정(충돌 방지)
+    "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[scss]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[yaml]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+    // ---------------------------
+    // ESLint
+    // ---------------------------
+    // ESLint가 검사할 언어들
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "json",
+        "jsonc"
+    ],
+
+    // 모노레포/워크스페이스에서 경로 자동 인식(Prisma/ts-devcontainer 같은 구조에 도움)
+    "eslint.workingDirectories": [{ "mode": "auto" }],
+
+    // Prettier가 포맷, ESLint는 규칙/자동수정 담당으로 역할 분리(충돌 방지)
+    "eslint.format.enable": false,
+
+    // ---------------------------
+    // 기타(선택)
+    // ---------------------------
+    "files.eol": "\n",
+    "[prisma]": {
+        "editor.defaultFormatter": "Prisma.prisma"
     }
-  },
-  "workbench.colorCustomizations": {
-    // 예: 편집기 전체 배경
-    "editor.background": "#171919",
-    // 예: 마우스로 끈 영역의 배경
-    "editor.selectionBackground": "#a3a496"
-  }
 }
-
-///

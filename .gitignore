@@ -1,0 +1,12 @@
+# Dependency directories
+node_modules/
+
+# Prisma generated client
+generated/
+
+.env*
+
+# Uploaded files
+public/*
+!public/.gitkeep
+

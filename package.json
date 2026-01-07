@@ -1,0 +1,42 @@
+{
+    "type": "module",
+    "scripts": {
+        "start": "node ./src/server.js",
+        "dev": "nodemon -e js,yaml ./src/server.js",
+        "build": "npm install && npx prisma db push && npx prisma generate",
+        "test": "NODE_ENV=TEST NODE_OPTIONS=--experimental-vm-modules jest --runInBand",
+        "test:watch": "npm test -- --watch"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.19",
+        "@types/express": "^5.0.6",
+        "jest": "^30.2.0",
+        "nodemon": "^3.1.11",
+        "prettier": "^3.3.2",
+        "prettier-plugin-prisma": "^5.0.0",
+        "prisma": "^7.2.0",
+        "supertest": "^7.1.4",
+        "tsx": "^4.21.0",
+        "typescript": "^5.9.3"
+    },
+    "dependencies": {
+        "@prisma/adapter-pg": "^7.2.0",
+        "@prisma/client": "^7.2.0",
+        "@prisma/config": "^7.2.0",
+        "bcrypt": "^6.0.0",
+        "cookie-parser": "^1.4.7",
+        "cors": "^2.8.5",
+        "dotenv": "^16.6.1",
+        "express": "^4.19.2",
+        "express-session": "^1.18.2",
+        "jsonwebtoken": "^9.0.3",
+        "multer": "^1.4.5-lts.1",
+        "passport": "^0.7.0",
+        "passport-jwt": "^4.0.1",
+        "passport-local": "^1.0.0",
+        "superstruct": "^2.0.2",
+        "swagger-jsdoc": "^6.2.8",
+        "swagger-ui-express": "^5.0.1",
+        "uuid": "^11.0.5"
+    }
+}
