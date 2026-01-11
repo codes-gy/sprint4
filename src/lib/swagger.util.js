@@ -28,7 +28,7 @@ const options = {
             { name: 'Articles', description: '게시글 CRUD 및 좋아요 기능' },
             { name: 'Comments', description: '상품/게시글 댓글 관리' },
             { name: 'Images', description: '이미지 업로드 API' },
-            { name: 'Auths', description: '인증 및 인 API' },
+            { name: 'Auths', description: '인증 및 인가 API' },
         ],
     },
 
